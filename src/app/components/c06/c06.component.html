@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<div class="container text-center">
+	<p>El componente C06</p>
+	<div>Una cadena de caracteres interpolada: {{unaCadena}}</div>
+	<div>Un número interpolado: {{unNumero}}</div>
+	<div>
+		Un objeto interpolado:
+		<ul>
+			<li>Apellido: {{unObjeto.nombre}}</li>
+			<li>Nombre: {{unObjeto.apellido}}</li>
+			<li>Ciudad: {{unObjeto.ciudad}}</li>
+		</ul>
+	</div>
+
+	<br />
+
+	<button class="btn btn-primary" (click)="unClic()">{{textoDelBoton}}</button>
+
+	<br />
+
+	<p class="alert alert-primary">
+		El botón ha sido clicado una cantidad
+		<span *ngIf="numeroDeClic%2 == 0; then siMiIfEsVerdad else elseDeMiIf"></span>
+		de veces
+	</p>
+	<ng-template #siMiIfEsVerdad>
+		<span class="alert alert-danger">par</span>
+	</ng-template>
+	<ng-template #elseDeMiIf>
+		<span class="alert alert-warning">impar</span>
+	</ng-template>
+
+	<br />
+
+	<div *ngFor="let unDeportista of deportistas; index as i; first as f; last as l; odd as o; even as e">
+		<b>{{unDeportista}} : </b>
+		su índice : {{i}}, es el primero de la lista : {{f}}, es el último : {{l}}, es un número impar: {{o}}, es un número par: {{e}}
+	</div>
+
+	<br />
+
+	<div *ngFor="let unDeportista of deportistas">
+		<div [ngSwitch]="unDeportista">
+			<span *ngSwitchCase="'Rafa Nadal'"
+				><strong>{{unDeportista}}</strong></span
+			>
+			<span *ngSwitchDefault>{{unDeportista}}</span>
+		</div>
+	</div>
+
+	<br />
+
+	<h4 [class]="miClaseFuente">Uso de ngClass</h4>
+
+	<br />
+
+	<button [class]="miClaseBoton" (click)="cambioDeClase()">Cambio de clase</button>
+</div>
