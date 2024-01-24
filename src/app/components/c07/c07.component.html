@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<div class="content">
+	<div class="container text-center py-3 content">
+		<h2>El componente C07</h2>
+		<div>{{mensaje}}</div>
+		<br />
+		<div>{{mensaje | lowercase}}</div>
+		<div>{{mensaje | uppercase}}</div>
+		<div>{{mensaje | titlecase}}</div>
+	</div>
+	<div class="container text-center py-3">
+		<div>pi : {{numPi}}</div>
+		<br />
+		<div>{{ numPi | number:'1.3-8'}}</div>
+		<br />
+	</div>
+	<div class="container text-center py-3">
+		<div>Parte del mercado: {{unaCifraPorcentaje}}</div>
+		<br />
+		<div>{{ unaCifraPorcentaje | percent:'2.3-4'}}</div>
+		<br />
+	</div>
+	<div class="container text-center py-3">
+		<div>Tesla M3 : {{teslaM3}}</div>
+		<br />
+		<div>48600,00€ => {{teslaM3 | currency: 'EUR' : 'symbol'}}</div>
+		<div>48600,00 EUR => {{teslaM3 | currency: 'EUR' : 'code'}}</div>
+		<div>
+			48600,00 euros, y no muy caro. =>
+			{{teslaM3 | currency:
+            'EUR' : 'euros, y no muy caro.'}}
+		</div>
+		<div>48600 € => {{teslaM3 | currency: 'EUR' : 'symbol': '1.0-0'}}</div>
+		<br />
+	</div>
+	<div class="container text-center py-3">
+		<br />
+		<div>Hoy es {{hoy}}</div>
+		<div>Hoy es {{hoy | date}}</div>
+		<div>Hoy es {{hoy | date : 'shortDate'}}. Hoy es {{hoy | date : 'shortTime'}}.</div>
+		<br />
+	</div>
+	<div class="container text-center py-3 content">
+		<h3>Un objeto</h3>
+		<div *ngFor="let unElemento of unObjeto | keyvalue">{{unElemento.key}} - {{unElemento.value}}</div>
+		<h3>Un diccionario</h3>
+		<div *ngFor="let unElemento of unDiccionario | keyvalue">{{unElemento.key}} - {{unElemento.value}}</div>
+	</div>
+	<div class="container text-center py-3">
+		<h3>Una cadena de carácteres</h3>
+		<div>{{ unaCadenaDeCaracteres | slice :0:30 }}{{ unaCadenaDeCaracteres | slice : 61:69}}</div>
+		<div>{{unaCadenaDeCaracteres | slice :0:30 }}{{ unaCadenaDeCaracteres| slice : -7}}</div>
+		<h3>Un array</h3>
+		<div *ngFor="let unElemento of unArray | slice:1:3">
+			{{unElemento}}
+		</div>
+	</div>
+</div>
+<div class="container text-center">
+	<div>
+		<hr />
+		<p>Un objeto :</p>
+		<div>{{unNuevoObjeto}}</div>
+		<hr />
+		<p>El mismo objeto en JSON :</p>
+		<div>{{unNuevoObjeto | json}}</div>
+		<hr />
+	</div>
+</div>
