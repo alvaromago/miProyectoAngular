@@ -10,6 +10,9 @@ import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { C08HijoComponent } from './components/c08-hijo/c08-hijo.component';
 import { C08PadreComponent } from './components/c08-padre/c08-padre.component';
+import { C0901Component } from './components/c0901/c0901.component';
+import { C0902Component } from './components/c0902/c0902.component';
+import { C09Component } from './components/c09/c09.component';
 
 
 registerLocaleData(es);
@@ -22,7 +25,10 @@ registerLocaleData(es);
     C06Component,
     C07Component,
     C08HijoComponent,
-    C08PadreComponent
+    C08PadreComponent,
+    C0901Component,
+    C0902Component,
+    C09Component
   ],
   imports: [
     BrowserModule
