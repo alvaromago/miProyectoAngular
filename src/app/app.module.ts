@@ -27,7 +27,11 @@ registerLocaleData(es);
     C06Component,
     C07Component,
     C08HijoComponent,
-    C08PadreComponent
+    C08PadreComponent,
+    C0901Component,
+    C0902Component,
+    C09Component,
+    C10Component
   ],
   imports: [
     BrowserModule,
