@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<div class="has-text-centered">
+	<h1 class="title">El componente C10</h1>
+	<hr />
+	<div class="row justify-content-md-center">
+		<div>
+			<form [formGroup]="miFormulario" (ngSubmit)="clic(miFormulario.value)">
+				<div>Mis datos de formulario : {{ miFormulario.value | json }}</div>
+				<hr />
+				<div class="form-group">
+					<label
+						>Nombre:<br />
+						<input type="text" class="input" name="nombre" formControlName="nombre" />
+					</label>
+				</div>
+				<div class="form-group">
+					<label>Color : </label>
+					<br />
+					<div class="select">
+						<select class="form-control" name="color" formControlName="color">
+							<option selected>Blanco</option>
+							<option>Azul</option>
+							<option>Negro</option>
+							<option>Rojo</option>
+							<option>Verde</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" name="adulto" formControlName="adulto" />
+						Soy adulto y vacunado
+					</label>
+				</div>
+				<button class="button is-primary" type="submit">Enviar</button>
+			</form>
+			<hr />
+		</div>
+	</div>
+</div>
