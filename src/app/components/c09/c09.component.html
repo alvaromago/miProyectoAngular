@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<div>
+	<button (click)="muestra()">Mostrar las citas</button>
+	<ul *ngFor="let cita of citas; let indice = index">
+		<li>{{cita}} <button (click)="suprime(indice)">X</button></li>
+	</ul>
+</div>
