@@ -15,6 +15,7 @@ import { C0901Component } from './components/c0901/c0901.component';
 import { C0902Component } from './components/c0902/c0902.component';
 import { C09Component } from './components/c09/c09.component';
 import { C10Component } from './components/c10/c10.component';
+import { C11Component } from './components/c11/c11.component';
 
 
 registerLocaleData(es);
@@ -31,7 +32,8 @@ registerLocaleData(es);
     C0901Component,
     C0902Component,
     C09Component,
-    C10Component
+    C10Component,
+    C11Component
   ],
   imports: [
     BrowserModule,
